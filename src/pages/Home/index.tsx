@@ -140,7 +140,7 @@ function Home() {
                                 }
 
                                 {
-                                    (tasks.length === 0 || tasks.find(task => task.isComplete)) && (
+                                    (tasks.length === 0 || tasks.every(task => task.isComplete)) && (
                                         <div className="not-tasks">
                                             <img src={IllustrationNotTaskToDo} alt="not tasks to do"/>
                                             <h2>Você não tem <br/> tarefas pendentes.</h2>
@@ -181,7 +181,7 @@ function Home() {
                                 }
 
                                 {
-                                    (tasks.length === 0 || tasks.find(task => !task.isComplete)) && (
+                                    (tasks.length === 0 || tasks.every(task => !task.isComplete)) && (
                                         <div className="not-tasks">
                                         <img src={IllustrationNotTaskComplete} alt="not tasks to do"/>
                                             <h2>Você não tem <br/> tarefas completas.</h2>
